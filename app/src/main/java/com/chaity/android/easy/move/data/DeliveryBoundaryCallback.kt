@@ -57,7 +57,7 @@ class DeliveryBoundaryCallback(
         isRequestInProgress.postValue(true)
         getDeliveriesFromService(api, offset,API_LIST_SIZE, { repos ->
             cache.insert(repos) {
-                offset =offset+  API_LIST_SIZE
+                offset += API_LIST_SIZE
                 isRequestInProgress.postValue(false)
             }
         }, { error ->

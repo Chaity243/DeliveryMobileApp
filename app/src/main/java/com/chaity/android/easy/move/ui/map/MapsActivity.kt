@@ -75,7 +75,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         // Add a marker using specified lat lang  and move the camera
         val latlang = LatLng(deliveryItem.location.lat,deliveryItem.location.lng)
-        mMap.addMarker(MarkerOptions().position(latlang).title(deliveryItem.description))
+        mMap.addMarker(MarkerOptions().position(latlang).title(deliveryItem.location.address))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latlang))
 
         //To just change the zoom value to any desired value between minimum value=2.0 and maximum value=21.0.
