@@ -1,6 +1,7 @@
 package com.chaity.android.easy.move.dagger.modules
 
 import androidx.room.Room
+import com.chaity.android.easy.move.BuildConfig.DATABASE_NAME
 import com.chaity.android.easy.move.MyApp
 import com.chaity.android.easy.move.db.DeliveryDao
 import com.chaity.android.easy.move.db.DeliveryDatabase
@@ -16,7 +17,7 @@ class DatabaseModule{
     @Singleton
     @Provides
     internal fun providesDeliveryDatabase(mApplication: MyApp): DeliveryDatabase {
-        return Room.databaseBuilder(mApplication, DeliveryDatabase::class.java, "Delivery").build()
+        return Room.databaseBuilder(mApplication, DeliveryDatabase::class.java, DATABASE_NAME).build()
     }
 
 

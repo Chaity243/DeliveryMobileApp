@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.chaity.android.easy.move.appConverter.Converters
 import com.chaity.android.easy.move.model.Delivery
+import com.chaity.android.easy.move.utils.Constants.DB_VERSION
 
 /**
  * Database schema that holds the list of deliveries
@@ -15,7 +16,7 @@ import com.chaity.android.easy.move.model.Delivery
 @TypeConverters(Converters::class)
 @Database(
         entities = [Delivery::class],
-        version = 1,
+        version = DB_VERSION,
         exportSchema = false
 )
 abstract class DeliveryDatabase : RoomDatabase() {
