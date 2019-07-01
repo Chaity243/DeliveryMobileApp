@@ -9,7 +9,7 @@ import retrofit2.Response
 
 private const val TAG = "DeliveryAPI"
 
-fun getDeliveriesFRomService(
+fun getDeliveriesFromService(
         api: DeliveryAPI,
         lastRequestedPage:Int,
         itemsPerPage: Int,

@@ -8,7 +8,6 @@ import com.chaity.android.easy.move.BuildConfig.API_LIST_SIZE
 import com.chaity.android.easy.move.api.DeliveryAPI
 import com.chaity.android.easy.move.db.DeliveryLocalCache
 import com.chaity.android.easy.move.model.Delivery
-import com.chaity.android.easy.move.utils.Constants
 
 /**
  * This boundary callback gets notified when user reaches to the edges of the list for example when
@@ -56,7 +55,7 @@ class DeliveryBoundaryCallback(
         if (isRequestInProgress.value!!) return
 
         isRequestInProgress.postValue(true)
-        getDeliveriesFRomService(api, offset,API_LIST_SIZE, { repos ->
+        getDeliveriesFromService(api, offset,API_LIST_SIZE, { repos ->
             cache.insert(repos) {
                 offset =offset+  API_LIST_SIZE
                 isRequestInProgress.postValue(false)
