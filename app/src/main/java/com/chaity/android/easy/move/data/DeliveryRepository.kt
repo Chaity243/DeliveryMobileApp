@@ -6,11 +6,7 @@ import com.chaity.android.easy.move.BuildConfig.API_LIST_SIZE
 import com.chaity.android.easy.move.api.DeliveryAPI
 import com.chaity.android.easy.move.db.DeliveryLocalCache
 import com.chaity.android.easy.move.model.DeliveriesResult
-import com.chaity.android.easy.move.utils.Constants
 import javax.inject.Inject
-
-
-
 
 
 /**

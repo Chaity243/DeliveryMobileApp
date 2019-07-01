@@ -1,5 +1,3 @@
-
-
 package com.chaity.android.easy.move.model
 
 import androidx.lifecycle.LiveData

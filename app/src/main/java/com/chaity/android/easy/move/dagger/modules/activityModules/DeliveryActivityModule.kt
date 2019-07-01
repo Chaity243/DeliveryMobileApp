@@ -18,11 +18,6 @@ class DeliveryActivityModule {
         return DeliveriesViewModel(repository)
     }
 
-   /* @Provides
-     fun provideDeliveryAdapter(): DeliveryAdapter {
-        return DeliveryAdapter()
-    }*/
-
     @Provides
      fun provideViewModelProvider(viewModel: DeliveriesViewModel): ViewModelProvider.Factory {
         return ViewModelProviderFactory<DeliveriesViewModel>(viewModel)
