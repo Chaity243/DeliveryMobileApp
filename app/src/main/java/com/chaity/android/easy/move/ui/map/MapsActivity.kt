@@ -3,6 +3,7 @@ package com.chaity.android.easy.move.ui.map
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.chaity.android.easy.move.BuildConfig.BUNDLE_KEY_DELIVERY
+import com.chaity.android.easy.move.BuildConfig.DEFAULT_MAP_ZOOM
 import com.chaity.android.easy.move.R
 import com.chaity.android.easy.move.model.Delivery
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -73,13 +74,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 .into(iv_del)
 
         // Add a marker using specified lat lang  and move the camera
-        val sydney = LatLng(deliveryItem.location.lat,deliveryItem.location.lng)
-        mMap.addMarker(MarkerOptions().position(sydney).title(deliveryItem.description))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        val latlang = LatLng(deliveryItem.location.lat,deliveryItem.location.lng)
+        mMap.addMarker(MarkerOptions().position(latlang).title(deliveryItem.description))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(latlang))
 
         //To just change the zoom value to any desired value between minimum value=2.0 and maximum value=21.0.
         //
         //The API warns that not all locations have tiles at values at or near maximum zoom.
-        mMap.animateCamera( CameraUpdateFactory.zoomTo( 17.0f ) );
+        mMap.animateCamera( CameraUpdateFactory.zoomTo( DEFAULT_MAP_ZOOM ) );
     }
 }
