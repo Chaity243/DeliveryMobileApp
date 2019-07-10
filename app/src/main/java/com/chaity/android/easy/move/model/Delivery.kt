@@ -2,6 +2,7 @@ package com.chaity.android.easy.move.model
 
 import android.os.Parcel
 import android.os.Parcelable
+import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
@@ -20,7 +21,7 @@ data class Delivery (
         @SerializedName("id")     @field:PrimaryKey  val id: Int,
         @SerializedName("description")      val description: String,
         @SerializedName("imageUrl")    val imageUrl: String,
-        @SerializedName("location")  val location: Location
+       @Embedded @SerializedName("location")  val location: Location
 
 ): Parcelable {
     constructor(parcel: Parcel) : this(

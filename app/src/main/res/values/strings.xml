@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Easy Move</string>
+    <string name="app_name">Delivery Mobile App</string>
     <string name="loading">Loading</string>
     <string name="language">Language: %s</string>
     <string name="search_hint">DElivery Repository</string>

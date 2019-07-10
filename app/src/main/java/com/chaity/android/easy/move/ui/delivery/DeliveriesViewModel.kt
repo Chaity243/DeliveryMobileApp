@@ -19,11 +19,9 @@ import javax.inject.Inject
 class DeliveriesViewModel @Inject constructor (private val repository: DeliveryRepository) : ViewModel() {
 
     private val repoResult = MutableLiveData<DeliveriesResult>()
-     var loader= MutableLiveData<Boolean>()
+    var loader= MutableLiveData<Boolean>()
     val repos: LiveData<PagedList<Delivery>>
     val networkErrors: LiveData<String>
-
-
 
     init {
         repoResult.postValue( repository.getDeliveries())

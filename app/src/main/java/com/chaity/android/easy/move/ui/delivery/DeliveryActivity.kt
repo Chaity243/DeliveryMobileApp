@@ -26,7 +26,7 @@ class DeliveryActivity : BaseActivity<DeliveriesViewModel>(), DeliveryItemClickL
     var adapter =  DeliveryAdapter(this)
 
     private var viewModel: DeliveriesViewModel? = null
-    private var showProgres: Boolean = false
+    private var showProgress: Boolean = false
 
 
     override fun getViewModel(): DeliveriesViewModel {
@@ -67,9 +67,9 @@ class DeliveryActivity : BaseActivity<DeliveriesViewModel>(), DeliveryItemClickL
         })
 
         viewModel?.loader?.observe(this, Observer {
-            showProgres = it
+            showProgress = it
 
-            showHideProgress(showProgres)
+            showHideProgress(showProgress)
         })
     }
 
